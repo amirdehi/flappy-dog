@@ -22,7 +22,7 @@ public class DogController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        GameManager.isGameOver = true;
-        Time.timeScale = 0; // Pause the game
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.GameOver();
     }
 }

@@ -23,11 +23,19 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= nextSpawnTime) {
-            SpawnObstacle();
+        if (GameManager.isGameRunning)
+        {
+            timer += Time.deltaTime;
+            if (timer >= nextSpawnTime)
+            {
+                SpawnObstacle();
+                timer = 0;
+                nextSpawnTime = Random.Range(minSpawnRate, maxSpawnRate);
+            }
+        }
+        else
+        {
             timer = 0;
-            nextSpawnTime = Random.Range(minSpawnRate, maxSpawnRate);
         }
     }
 
