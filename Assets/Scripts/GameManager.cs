@@ -50,21 +50,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /*void Update()
-    {
-        if (isGameRunning)
-        {
-            if (Input.GetMouseButtonDown(0)) // Tap to restart
-            {
-                isGameRunning = false;
-                Time.timeScale = 1; // Unpause the game
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-            score += (int)(Time.deltaTime); // Increment score over time
-            UpdateScoreUI();
-        }
-    }*/
-
     public void GameOver()
     {
         isGameRunning = false;
